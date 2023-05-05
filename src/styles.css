@@ -80,3 +80,22 @@ li::first-letter{
 .right{
     margin-top: 20px;
 }
+
+a{
+    color: rgb(33,33,33);
+    cursor: default;
+    text-decoration: none;
+    
+}
+a:hover{
+text-decoration: none;
+cursor: pointer;
+color: blue;
+text-decoration: underline;
+
+}
+
+a.button{
+    color: blue;
+    margin-top: 5px;
+}

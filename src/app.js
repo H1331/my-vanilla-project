@@ -28,6 +28,8 @@ function displayTemperature(response) {
     date.innerHTML = formatDate(response.data.dt * 1000);
 
 
+    celciusTemperature = Math.round(response.data.main.temp);
+
 }
 function formatDate(){
     let date = new Date();
@@ -56,3 +58,35 @@ function handleSubmit(event) {
     SearchCity(cityInputElement.value);
 }
 SearchCity("Sydney");
+
+
+let celcius = document.querySelector("#celciusLink");
+celcius.addEventListener("click",displayCelcius);
+ 
+function displayCelcius(event) {
+    event.preventDefault();
+    let temperatureNumber = document.querySelector("#temperatureNumber");
+    temperatureNumber.innerHTML = Math.round(celciusTemperature);
+    
+
+}
+
+
+let fahrenheit= document.querySelector("#fahrenheitLink");
+fahrenheit.addEventListener("click",displayFahrenheit);
+ 
+function displayFahrenheit(event) {
+    event.preventDefault();
+    let temperatureNumber = document.querySelector("#temperatureNumber");
+    let fahrenheitTemperature = (celciusTemperature * 9) / 5 + 32;
+    temperatureNumber.innerHTML = Math.round(fahrenheitTemperature);
+    // celcius.classList.remove("active");
+    // fahrenheit.classList.remove("active");
+    
+
+}
+
+
+
+
+
