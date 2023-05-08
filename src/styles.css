@@ -99,3 +99,21 @@ a.button{
     color: blue;
     margin-top: 5px;
 }
+
+.weather-forecast{
+    text-align: center;
+    color: #000;
+}
+
+.weather-forecast-date{
+    font-size: 16px;
+    opacity: 0.5;
+}
+
+.weather-forecast-temperature{
+    font-size: 13px;
+}
+
+.weather-forecast-temperature-min{
+    opacity: 0.5;
+}
